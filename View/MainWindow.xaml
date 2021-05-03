@@ -18,7 +18,7 @@
         <Label x:Name="lblVotreImc" Content="Votre IMC" HorizontalAlignment="Center" Margin="0,384,0,0" VerticalAlignment="Top" FontSize="14" Foreground="#8094B7"/>
         <Label x:Name="lblValeur" Content="Valeur" HorizontalAlignment="Left" Margin="91,419,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold" Width="67"/>
         <Label x:Name="lblCategorie" Content="Catégorie" HorizontalAlignment="Left" Margin="294,419,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold"/>
-        <TextBox x:Name="txtBoxValeur" HorizontalAlignment="Left" Margin="67,465,0,0" Text="{Binding Path=Imc, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="14"/>
+        <TextBox x:Name="txtBoxValeur" Background="{Binding BackgroudColor}" HorizontalAlignment="Left" Margin="67,465,0,0" Text="{Binding Path=Imc, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="14"/>
         <TextBox x:Name="txtBoxCategorie" HorizontalAlignment="Left" Margin="275,465,0,0" Text="{Binding Path=Categorie, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="14"/>
         <Label x:Name="lblIPoidsIdeal" Content="Poids Idéal" HorizontalAlignment="Left" Margin="168,522,0,0" VerticalAlignment="Top" FontSize="14" Foreground="#8094B7"/>
         <TextBox x:Name="txtBoxPoidsIdeal" HorizontalAlignment="Left" Margin="168,575,0,0" Text="{Binding Path=PoidsIdeal, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" TextWrapping="Wrap" VerticalAlignment="Top" Width="86" FontSize="14" Height="23"/>

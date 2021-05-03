@@ -8,12 +8,30 @@ using ImcPoidsMVVM.Models;
 using System.ComponentModel;
 using System.Windows.Input;
 using System.Windows;
+using System.Windows.Media;
 
 namespace ImcPoidsMVVM.ViewModels
 {
     class MainWindowViewModel : INotifyPropertyChanged
     {
+        private SolidColorBrush backgroundColor = new SolidColorBrush(Colors.Black);
+
+        public SolidColorBrush BackgroundColor
+        {
+            get { return backgroundColor; }
+            set
+            {
+                if (backgroundColor == value)
+                    return;
+
+                backgroundColor = value;
+                RaisePropertyChanged(nameof(backgroundColor));
+            }
+        }
+
         public event PropertyChangedEventHandler PropertyChanged;
+
+        private void RaisePropertyChanged(string name) => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
 
         private Sujet _sujet;
 
@@ -126,7 +144,14 @@ namespace ImcPoidsMVVM.ViewModels
             mesCalculs.Categorie();
             Categorie = monSujet.Categorie;
 
-            
+
+
+            if (BackgroundColor.Color == Colors.Red)
+                BackgroundColor = new SolidColorBrush(Colors.Blue);
+            else
+                BackgroundColor = new SolidColorBrush(Colors.Red);
+
+
             /*
 
             if (monSujet.Categorie == "Maigreur Sévère")
