@@ -14,18 +14,18 @@ namespace ImcPoidsMVVM.ViewModels
 {
     class MainWindowViewModel : INotifyPropertyChanged
     {
-        private SolidColorBrush backgroundColor = new SolidColorBrush(Colors.Black);
+        private SolidColorBrush backgroundCouleur = new SolidColorBrush(Colors.Black);
 
-        public SolidColorBrush BackgroundColor
+        public SolidColorBrush BackgroundCouleur
         {
-            get { return backgroundColor; }
+            get { return backgroundCouleur; }
             set
             {
-                if (backgroundColor == value)
+                if (backgroundCouleur == value)
                     return;
 
-                backgroundColor = value;
-                RaisePropertyChanged(nameof(backgroundColor));
+                backgroundCouleur = value;
+                RaisePropertyChanged(nameof(backgroundCouleur));
             }
         }
 
@@ -145,58 +145,48 @@ namespace ImcPoidsMVVM.ViewModels
             Categorie = monSujet.Categorie;
 
 
-
-            if (BackgroundColor.Color == Colors.Red)
-                BackgroundColor = new SolidColorBrush(Colors.Blue);
-            else
-                BackgroundColor = new SolidColorBrush(Colors.Red);
-
-
             /*
+            if (BackgroundCouleur.Color == Colors.Red)
+                BackgroundCouleur = new SolidColorBrush(Colors.Blue);
+            else
+                BackgroundCouleur = new SolidColorBrush(Colors.Blue);
+            */
+
 
             if (monSujet.Categorie == "Maigreur Sévère")
             {
-                txtBoxCategorie.Background = Brushes.Red;
-                txtBoxValeur.Background = Brushes.Red;
+                BackgroundCouleur = new SolidColorBrush(Colors.Red);
             }
             if (monSujet.Categorie == "Maigreur")
             {
-                txtBoxCategorie.Background = Brushes.Orange;
-                txtBoxValeur.Background = Brushes.Orange;
+                BackgroundCouleur = new SolidColorBrush(Colors.Orange);
             }
-
 
             if (monSujet.Categorie == "Normal")
             {
-                txtBoxCategorie.Background = Brushes.Green;
-                txtBoxValeur.Background = Brushes.Green;
+                BackgroundCouleur = new SolidColorBrush(Colors.Green);
             }
 
             if (monSujet.Categorie == "Surcharge")
             {
-                txtBoxCategorie.Background = Brushes.GreenYellow;
-                txtBoxValeur.Background = Brushes.GreenYellow;
+                BackgroundCouleur = new SolidColorBrush(Colors.GreenYellow);
             }
 
             if (monSujet.Categorie == "Obésité")
             {
-                txtBoxCategorie.Background = Brushes.Yellow;
-                txtBoxValeur.Background = Brushes.Yellow;
+                BackgroundCouleur = new SolidColorBrush(Colors.Yellow);
             }
 
             if (monSujet.Categorie == "Obésité Modérée")
             {
-                txtBoxCategorie.Background = Brushes.Orange;
-                txtBoxValeur.Background = Brushes.Orange;
+                BackgroundCouleur = new SolidColorBrush(Colors.Orange);
             }
 
             if ((monSujet.Categorie == "Obésité Morbide"))
             {
-                txtBoxCategorie.Background = Brushes.Red;
-                txtBoxValeur.Background = Brushes.Red;
+                BackgroundCouleur = new SolidColorBrush(Colors.Red);
             }
 
-            */
         }
 
         private void QuitterAppliAction(object sender)

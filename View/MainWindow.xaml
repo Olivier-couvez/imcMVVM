@@ -7,22 +7,22 @@
         mc:Ignorable="d"
         Title="Calcul IMC" Height="800" Width="450" FontFamily="Century Gothic">
     <Grid x:Name="ImcPoids" Margin="0,0,0,0" Width="450" Height="800"  >
-        <Label Content="Cacul de vos IMC et poids Idéal" HorizontalAlignment="Center" VerticalAlignment="Top" Width="230" Foreground="#AE1281" FontWeight="Bold" FontSize="14" Height="27" Margin="0,20,0,0"/>
-        <Label x:Name="lblTaille" Content="Votre taille (cm)" HorizontalAlignment="Left" Margin="30,89,0,0" VerticalAlignment="Top" Height="35" Width="142" FontSize="14" Foreground="#859BF6"/>
-        <Label x:Name="lblPoids" Content="Votre poids (kg)" HorizontalAlignment="Left" Margin="30,144,0,0" VerticalAlignment="Top" Height="35" Width="135" FontSize="14" Foreground="#859BF6"/>
-        <TextBox x:Name="txtBoxTaille" HorizontalAlignment="Left" Margin="208,93,0,0" Text="{Binding Path=Taillecm, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" TextWrapping="Wrap" VerticalAlignment="Top" Width="77" Height="27" FontSize="14"/>
-        <TextBox x:Name="txtBoxPoids" HorizontalAlignment="Left" Margin="208,148,0,0" Text="{Binding Path=Poids, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" TextWrapping="Wrap" VerticalAlignment="Top" Height="25" Width="87" FontSize="14"/>
-        <Label x:Name="lblSexe" Content="Précisez votre sexe" HorizontalAlignment="Left" Margin="160,235,0,0" VerticalAlignment="Top" Height="25" Width="150" FontSize="14" RenderTransformOrigin="0.88,0.602" FontWeight="Bold"/>
-        <Button x:Name="btnFemme" Command="{Binding btnFemmeClick}" Content="Femme" HorizontalAlignment="Left" Margin="94,283,0,0" VerticalAlignment="Top" Height="25" Width="95" FontSize="14" FontWeight="Bold" Background="#FFC0FF"/>
-        <Button x:Name="btnHomme" Command="{Binding btnHommeClick}" Content="Homme" HorizontalAlignment="Left" Margin="262,283,0,0" VerticalAlignment="Top" Height="25" Width="95" FontSize="14" FontWeight="Bold" Background="#C0FFFF"/>
-        <Label x:Name="lblVotreImc" Content="Votre IMC" HorizontalAlignment="Center" Margin="0,384,0,0" VerticalAlignment="Top" FontSize="14" Foreground="#8094B7"/>
+        <Label Content="Cacul de vos IMC et poids Idéal" HorizontalAlignment="Center" VerticalAlignment="Top" Width="310" Foreground="#AE1281" FontWeight="Bold" FontSize="18" Height="39" Margin="0,20,0,0"/>
+        <Label x:Name="lblTaille" Content="Votre taille (cm)" HorizontalAlignment="Left" Margin="30,90,0,0" VerticalAlignment="Top" Height="35" Width="142" FontSize="14" Foreground="#859BF6"/>
+        <Label x:Name="lblPoids" Content="Votre poids (kg)" HorizontalAlignment="Left" Margin="30,145,0,0" VerticalAlignment="Top" Height="35" Width="135" FontSize="14" Foreground="#859BF6"/>
+        <TextBox x:Name="txtBoxTaille" HorizontalAlignment="Left" Margin="208,90,0,0" Text="{Binding Path=Taillecm, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, StringFormat=window heigh:{#:F0} }" TextWrapping="Wrap" VerticalAlignment="Top" Width="77" Height="27" FontSize="14" VerticalContentAlignment="Center"/>
+        <TextBox x:Name="txtBoxPoids" HorizontalAlignment="Left" Margin="208,145,0,0" Text="{Binding Path=Poids, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, StringFormat=window heigh:{#:F0}}" TextWrapping="Wrap" VerticalAlignment="Top" Height="25" Width="77" FontSize="14" VerticalContentAlignment="Center"/>
+        <Label x:Name="lblSexe" Content="Précisez votre sexe" HorizontalAlignment="Left" Margin="160,235,0,0" VerticalAlignment="Top" Height="25" Width="173" FontSize="16" RenderTransformOrigin="0.88,0.602" FontWeight="Bold"/>
+        <Button x:Name="btnFemme" Command="{Binding btnFemmeClick}" Content="Femme" HorizontalAlignment="Left" Margin="94,286,0,0" VerticalAlignment="Top" Height="38" Width="110" FontSize="16" FontWeight="Bold" Background="#FFC0FF"/>
+        <Button x:Name="btnHomme" Command="{Binding btnHommeClick}" Content="Homme" HorizontalAlignment="Left" Margin="262,286,0,0" VerticalAlignment="Top" Height="38" Width="110" FontSize="16" FontWeight="Bold" Background="#C0FFFF"/>
+        <Label x:Name="lblVotreImc" Content="Votre IMC" HorizontalAlignment="Center" Margin="0,384,0,0" VerticalAlignment="Top" FontSize="18" Foreground="#8094B7"/>
         <Label x:Name="lblValeur" Content="Valeur" HorizontalAlignment="Left" Margin="91,419,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold" Width="67"/>
         <Label x:Name="lblCategorie" Content="Catégorie" HorizontalAlignment="Left" Margin="294,419,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold"/>
-        <TextBox x:Name="txtBoxValeur" Background="{Binding BackgroudColor}" HorizontalAlignment="Left" Margin="67,465,0,0" Text="{Binding Path=Imc, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="14"/>
-        <TextBox x:Name="txtBoxCategorie" HorizontalAlignment="Left" Margin="275,465,0,0" Text="{Binding Path=Categorie, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="14"/>
-        <Label x:Name="lblIPoidsIdeal" Content="Poids Idéal" HorizontalAlignment="Left" Margin="168,522,0,0" VerticalAlignment="Top" FontSize="14" Foreground="#8094B7"/>
-        <TextBox x:Name="txtBoxPoidsIdeal" HorizontalAlignment="Left" Margin="168,575,0,0" Text="{Binding Path=PoidsIdeal, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" TextWrapping="Wrap" VerticalAlignment="Top" Width="86" FontSize="14" Height="23"/>
-        <Label x:Name="lblKg" Content="Kg" HorizontalAlignment="Left" Margin="275,571,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <TextBox x:Name="txtBoxValeur" Background="{Binding BackgroundCouleur}" HorizontalAlignment="Left" Margin="30,465,0,0" Text="{Binding Path=Imc, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, StringFormat=\{0:F2\}}" TextWrapping="Wrap" VerticalAlignment="Top" Width="157" FontSize="14" FontWeight="Bold" TextAlignment="Center"/>
+        <TextBox x:Name="txtBoxCategorie" Background="{Binding BackgroundCouleur}" HorizontalAlignment="Left" Margin="268,465,0,0" Text="{Binding Path=Categorie, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" TextWrapping="Wrap" VerticalAlignment="Top" Width="157" FontSize="14" FontWeight="Bold"/>
+        <Label x:Name="lblIPoidsIdeal" Content="Poids Idéal" HorizontalAlignment="Left" Margin="168,522,0,0" VerticalAlignment="Top" FontSize="18" Foreground="#8094B7" FontWeight="Bold"/>
+        <TextBox x:Name="txtBoxPoidsIdeal" HorizontalAlignment="Left" Margin="168,572,0,0" Text="{Binding Path=PoidsIdeal, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, StringFormat=\{0:F2\}}" TextWrapping="Wrap" VerticalAlignment="Top" Width="86" FontSize="14" Height="23" TextAlignment="Center"/>
+        <Label x:Name="lblKg" Content="Kg" HorizontalAlignment="Left" Margin="255,570,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"/>
         <Button x:Name="btnQuitter" Command="{Binding QuitterAppli}" Content="Quitter" HorizontalAlignment="Left" Margin="325,688,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Width="85"/>
         <Button x:Name="btnNouveau" Command="{Binding NouveauCalcul}" Content="Nouveau" HorizontalAlignment="Left" Margin="225,688,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Width="85"/>
 
