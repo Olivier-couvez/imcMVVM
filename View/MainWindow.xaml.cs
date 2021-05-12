@@ -29,7 +29,6 @@ namespace ImcPoidsMVVM.View
             InitializeComponent();
             //this.DataContext = this;
             DataContext = new MainWindowViewModel();
-            
         }
 
         

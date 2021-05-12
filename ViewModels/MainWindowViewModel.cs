@@ -105,6 +105,10 @@ namespace ImcPoidsMVVM.ViewModels
             {
                 // calcul
                 CalculEtaffichage(sexe);
+            }else
+            {
+                MessageBox.Show("Vérifiez votre saisie, le poids doit être compris entre 20 et 180 Kg et la taille entre 65 et 220 cm", "Erreur Saisie", MessageBoxButton.OK, MessageBoxImage.Error);
+                NouveauCalculAction(sujet);
             }
         }
 
@@ -201,6 +205,8 @@ namespace ImcPoidsMVVM.ViewModels
             Imc = 0;
             PoidsIdeal = 0;
             Categorie = "";
+            BackgroundCouleur = new SolidColorBrush(Colors.Black);
+
         }
     }
 }
